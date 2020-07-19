@@ -3,7 +3,7 @@
 declare -a FRUITS
 
 # Declare array as a space seperated list
-FRUITS=(apple pear banana)
+FRUITS=(grapefruit pineapple avocado)
 
 for FRUIT in "${FRUITS[@]}"
 do
