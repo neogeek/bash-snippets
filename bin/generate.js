@@ -13,7 +13,7 @@ const formatTitle = title =>
         .replace(SNIPPET_FILE_EXTENSION, '')
         .replace(/(^| )[a-z]/g, match => match.toUpperCase());
 
-const formatContent = content => '```bash\n' + content + '\n```';
+const formatContent = content => '```bash\n' + content.trim() + '\n```';
 
 const snippets = readdirSync(SNIPPETS_DIR)
     .filter(file => file.match(SNIPPET_FILE_EXTENSION))
@@ -30,6 +30,6 @@ process.stdout.write(
                 `- [${title}](#${title.replace(/ /, '-').toLowerCase()})`
         )
         .join('\n')}\n\n${snippets
-        .map(({ title, content }) => `## ${title}\n${content}`)
+        .map(({ title, content }) => `## ${title}\n\n${content}`)
         .join('\n\n')}\n`
 );

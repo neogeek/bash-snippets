@@ -7,6 +7,7 @@
 - [If Statements](#if-statements)
 
 ## Array
+
 ```bash
 #!/bin/bash
 
@@ -35,10 +36,10 @@ do
 	echo "${WORD}"
 
 done
-
 ```
 
 ## Cli Flags
+
 ```bash
 #!/bin/bash
 
@@ -57,10 +58,10 @@ do
     esac
 
 done
-
 ```
 
 ## If Statements
+
 ```bash
 #!/bin/bash
 
@@ -71,5 +72,4 @@ if [ -z "${EMPTY}" ]; then
     echo "Variable is empty."
 
 fi
-
 ```
