@@ -1,4 +1,4 @@
-# bash-snippets
+# Bash Snippets
 
 ## Array
 

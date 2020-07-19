@@ -23,4 +23,4 @@ const snippets = readdirSync(SNIPPETS_DIR)
     )
     .join('\n\n');
 
-process.stdout.write(`# bash-snippets\n\n${snippets}\n`);
+process.stdout.write(`# Bash Snippets\n\n${snippets}\n`);
