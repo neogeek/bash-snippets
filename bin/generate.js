@@ -11,13 +11,16 @@ const snippets = readdirSync(SNIPPETS_DIR)
     .filter(file => file.match(SNIPPET_FILE_EXTENSION))
     .map(
         file =>
-            `## ${file.replace(
-                SNIPPET_FILE_EXTENSION,
-                ''
-            )}\n\n\`\`\`bash\n${readFileSync(
+            `## ${file
+                .replace('_', ' ')
+                .replace(SNIPPET_FILE_EXTENSION, '')
+                .replace(/(^| )[a-z]/g, match =>
+                    match.toUpperCase()
+                )}\n\n\`\`\`bash\n${readFileSync(
                 join(SNIPPETS_DIR, file),
                 'utf8'
             )}\`\`\``
-    );
+    )
+    .join('\n\n');
 
 process.stdout.write(`# bash-snippets\n\n${snippets}\n`);

@@ -1,19 +1,33 @@
 # bash-snippets
 
-## array
+## Array
 
 ```bash
 #!/bin/bash
 
-declare -a WORDS
+declare -a FRUITS
 
 # Declare array as a space seperated list
-WORDS=(apple pear banana)
+FRUITS=(grapefruit pineapple avocado)
 
-for WORD in "${WORDS[@]}"
+for FRUIT in "${FRUITS[@]}"
 do
 
-	echo "${WORD}"
+	echo "${FRUIT}"
 
 done
+```
+
+## If Statements
+
+```bash
+#!/bin/bash
+
+EMPTY=""
+
+if [ -z "${EMPTY}" ]; then
+
+    echo "Variable is empty."
+
+fi
 ```
