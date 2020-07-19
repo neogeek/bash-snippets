@@ -5,6 +5,7 @@
 - [Array](#array)
 - [Cli Flags](#cli-flags)
 - [If Statements](#if-statements)
+- [String](#string)
 
 ## Array
 
@@ -72,4 +73,16 @@ if [ -z "${EMPTY}" ]; then
     echo "Variable is empty."
 
 fi
+```
+
+## String
+
+```bash
+#!/bin/bash
+
+# Replace a word in a string.
+echo "This is just a test." | sed s/just/only/
+
+# Replace a pattern in a string.
+echo "1 is the loneliest number there will ever be." | sed s/[0-9]/One/
 ```
