@@ -25,7 +25,10 @@ const snippets = readdirSync(SNIPPETS_DIR)
 
 process.stdout.write(
     `# Bash Snippets\n\n> A collection of code snippets I found useful while coding in bash.\n\n${snippets
-        .map(({ title }) => `- [${title}](#${title.replace(/ /, '%20')})`)
+        .map(
+            ({ title }) =>
+                `- [${title}](#${title.replace(/ /, '-').toLowerCase()})`
+        )
         .join('\n')}\n\n${snippets
         .map(({ title, content }) => `## ${title}\n${content}`)
         .join('\n\n')}\n`
