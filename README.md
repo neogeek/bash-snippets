@@ -28,6 +28,18 @@ do
 
 done
 
+# Add value to existing array.
+FRUITS+=(blueberries)
+
+echo "${FRUITS[@]}"
+
+OTHER_FRUITS=(apple pomegranate mango)
+
+# Add another array to the end of an exisiting array.
+FRUITS+=("${OTHER_FRUITS[@]}")
+
+echo "${FRUITS[@]}"
+
 SENTENCE="This is a sample sentence."
 
 # Split string on spaces.
