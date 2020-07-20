@@ -2,56 +2,79 @@
 
 > A collection of code snippets I found useful while coding in bash.
 
-- [Array](#array)
+- [Array Add](#array-add)
+- [Array Create](#array-create)
+- [Array String_split](#array-string_split)
 - [Cli Flags](#cli-flags)
 - [If Statements](#if-statements)
 - [String](#string)
 
-## Array
+## Array Add
 
 ```bash
 #!/bin/bash
 
+# Declare a new array variable.
 declare -a FRUITS
 
-# Declare an array as a space seperated list.
+# Populate an array with a space seperated list.
 FRUITS=(grapefruit pineapple avocado)
-
-echo "${FRUITS[@]}"
-
-printf "There are %i fruits in the array." "${#FRUITS[@]}"
-
-for FRUIT in "${FRUITS[@]}"
-do
-
-	echo "${FRUIT}"
-
-done
 
 # Add value to existing array.
 FRUITS+=(blueberries)
 
+# Print out all values of an array.
 echo "${FRUITS[@]}"
 
+# Declare another array as a space seperated list.
 OTHER_FRUITS=(apple pomegranate mango)
 
 # Add another array to the end of an exisiting array.
 FRUITS+=("${OTHER_FRUITS[@]}")
 
+# Print out all values of an array.
+echo "${FRUITS[@]}"
+```
+
+## Array Create
+
+```bash
+#!/bin/bash
+
+# Declare a new array variable.
+declare -a FRUITS
+
+# Populate an array with a space seperated list.
+FRUITS=(grapefruit pineapple avocado)
+
+# Print out all values of an array.
 echo "${FRUITS[@]}"
 
-SENTENCE="This is a sample sentence."
+# Print out the length of an array.
+printf "There are %i fruits in the array." "${#FRUITS[@]}"
+
+# Iterate through each value of an array.
+for FRUIT in "${FRUITS[@]}"
+do
+	echo "${FRUIT}"
+done
+```
+
+## Array String_split
+
+```bash
+#!/bin/bash
 
 # Split string on spaces.
 WORDS=("${SENTENCE// / }")
 
+# Print out all values of an array.
 echo "${SENTENCE}"
 
+# Iterate through each value of an array.
 for WORD in "${WORDS[@]}"
 do
-
 	echo "${WORD}"
-
 done
 ```
 
