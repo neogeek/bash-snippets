@@ -17,6 +17,10 @@ declare -a FRUITS
 # Declare an array as a space seperated list.
 FRUITS=(grapefruit pineapple avocado)
 
+echo "${FRUITS[@]}"
+
+printf "There are %i fruits in the array." "${#FRUITS[@]}"
+
 for FRUIT in "${FRUITS[@]}"
 do
 
@@ -71,6 +75,20 @@ EMPTY=""
 if [ -z "${EMPTY}" ]; then
 
     echo "Variable is empty."
+
+fi
+
+NUMBER=10
+
+if [ "${NUMBER}" -gt 0 ]; then
+
+    echo "Number is greater than 0."
+
+fi
+
+if [ "${NUMBER}" -lt 100 ]; then
+
+    echo "Number is less than 100."
 
 fi
 ```
