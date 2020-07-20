@@ -5,6 +5,10 @@ declare -a FRUITS
 # Declare an array as a space seperated list.
 FRUITS=(grapefruit pineapple avocado)
 
+echo "${FRUITS[@]}"
+
+printf "There are %i fruits in the array." "${#FRUITS[@]}"
+
 for FRUIT in "${FRUITS[@]}"
 do
 
