@@ -4,7 +4,7 @@
 
 - [Array Add](#array-add)
 - [Array Create](#array-create)
-- [Array String_split](#array-string_split)
+- [Array String Split](#array-string-split)
 - [Cli Flags](#cli-flags)
 - [If Statements](#if-statements)
 - [String](#string)
@@ -60,7 +60,7 @@ do
 done
 ```
 
-## Array String_split
+## Array String Split
 
 ```bash
 #!/bin/bash

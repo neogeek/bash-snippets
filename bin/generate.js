@@ -9,8 +9,8 @@ const SNIPPET_FILE_EXTENSION = /\.sh$/;
 
 const formatTitle = title =>
     title
-        .replace('_', ' ')
         .replace(SNIPPET_FILE_EXTENSION, '')
+        .replace(/_/g, ' ')
         .replace(/(^| )[a-z]/g, match => match.toUpperCase());
 
 const formatContent = content => '```bash\n' + content.trim() + '\n```';
@@ -27,7 +27,7 @@ process.stdout.write(
     `# Bash Snippets\n\n> A collection of code snippets I found useful while coding in bash.\n\n${snippets
         .map(
             ({ title }) =>
-                `- [${title}](#${title.replace(/ /, '-').toLowerCase()})`
+                `- [${title}](#${title.replace(/ /g, '-').toLowerCase()})`
         )
         .join('\n')}\n\n${snippets
         .map(({ title, content }) => `## ${title}\n\n${content}`)
