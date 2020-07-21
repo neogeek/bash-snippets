@@ -4,6 +4,7 @@ const { readdirSync, readFileSync } = require('fs');
 const { join } = require('path');
 
 const SNIPPETS_DIR = './snippets';
+const TEMPLATES_DIR = './templates';
 
 const SNIPPET_FILE_EXTENSION = /\.sh$/;
 
@@ -24,7 +25,7 @@ const snippets = readdirSync(SNIPPETS_DIR)
     }));
 
 process.stdout.write(
-    `# Bash Snippets\n\n> A collection of code snippets I found useful while coding in bash.\n\n${snippets
+    `${readFileSync(join(TEMPLATES_DIR, 'header.md'), 'utf8')}\n${snippets
         .map(
             ({ title }) =>
                 `- [${title}](#${title.replace(/ /g, '-').toLowerCase()})`
