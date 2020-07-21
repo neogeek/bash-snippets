@@ -1,5 +1,5 @@
 test:
 	shellcheck snippets/*.sh
 
-generate:
-	./bin/generate.js > README.md
+generate_readme:
+	./bin/generate_readme.js > README.md
