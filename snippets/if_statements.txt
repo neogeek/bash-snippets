@@ -1,0 +1,3 @@
+Variable is empty.
+Number is greater than 0.
+Number is less than 100.

@@ -1,0 +1,6 @@
+This is a sample sentence.
+This
+is
+a
+sample
+sentence.

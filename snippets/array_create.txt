@@ -1,0 +1,5 @@
+grapefruit pineapple avocado
+There are 3 fruits in the array.
+grapefruit
+pineapple
+avocado
