@@ -1,0 +1,14 @@
+./snippets/array_add.sh
+./snippets/array_add.txt
+./snippets/array_create.sh
+./snippets/array_create.txt
+./snippets/array_string_split.sh
+./snippets/array_string_split.txt
+./snippets/cli_flags.sh
+./snippets/cli_flags.txt
+./snippets/files.sh
+./snippets/files.txt
+./snippets/if_statements.sh
+./snippets/if_statements.txt
+./snippets/string.sh
+./snippets/string.txt

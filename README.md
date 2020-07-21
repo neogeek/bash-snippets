@@ -6,6 +6,7 @@
 - [Array Create](#array-create)
 - [Array String Split](#array-string-split)
 - [Cli Flags](#cli-flags)
+- [Files](#files)
 - [If Statements](#if-statements)
 - [String](#string)
 
@@ -96,6 +97,19 @@ do
         ?* ) printf "Invalid option %s\n\n" "${arg}"; exit;;
 
     esac
+
+done
+```
+
+## Files
+
+```bash
+#!/bin/bash
+
+# Loop through files in directory.
+for FILE in ./snippets/*; do
+
+    echo "${FILE}"
 
 done
 ```
