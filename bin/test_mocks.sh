@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for SNIPPET_FILE in ./snippets/*.sh; do
+find ./snippets -type f -name "*.sh" | sort -n | while read -r SNIPPET_FILE; do
 
     MOCK_FILE="${SNIPPET_FILE%.*}.txt"
 

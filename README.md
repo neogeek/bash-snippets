@@ -109,7 +109,7 @@ done
 #!/bin/bash
 
 # Loop through files in directory.
-for FILE in ./snippets/*; do
+find ./snippets -type f -name "*" | while read -r FILE; do
 
     echo "${FILE}"
 
