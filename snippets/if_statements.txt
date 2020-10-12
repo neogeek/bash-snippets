@@ -1,3 +1,5 @@
 Variable is empty.
 Number is greater than 0.
 Number is less than 100.
+./snippets/if_statements.sh exists
+./snippets/if_else_statements.sh does not exist
