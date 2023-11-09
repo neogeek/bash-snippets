@@ -109,7 +109,7 @@ done
 #!/bin/bash
 
 # Loop through files in directory.
-find ./snippets -type f -name "*" | while read -r FILE; do
+find ./snippets -type f -name "*.sh" -or -name "*.txt" | sort -n | while read -r FILE; do
 
     echo "${FILE}"
 
@@ -140,6 +140,18 @@ fi
 if [ "${NUMBER}" -lt 100 ]; then
 
     echo "Number is less than 100."
+
+fi
+
+if [ -f ./snippets/if_statements.sh ]; then
+
+    echo "./snippets/if_statements.sh exists"
+
+fi
+
+if [ ! -f ./snippets/if_else_statements.sh ]; then
+
+    echo "./snippets/if_else_statements.sh does not exist"
 
 fi
 ```
